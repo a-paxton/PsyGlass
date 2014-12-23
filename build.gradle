@@ -1,0 +1,30 @@
+/**
+ *
+ * PsyGlass: An Open-Source Framework for Implementing Google Glass in Research Settings
+ *
+ * Note: When changing master settings, remember to re-sync project with Gradle files.
+ *
+ * For more, see "PsyGlass: Capitalizing on Google Glass for Naturalistic Data Collection"
+ * (Paxton, Rodriguez, & Dale, submitted).
+ *
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}

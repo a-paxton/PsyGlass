@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>PsyGlass Experimenter Console</title>
+	<link rel="shortcut icon" href="resources/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/style.css">
+</head>
+
+<body>
+	<nav>
+		<ul class="clearfix">
+			<li><a id="nav_home" href="index.html">PG</a></li>
+			<li><a class="nav_item" href="index.html">Home</a></li>
+			<li><a class="nav_item" href="experiment.html">Experiment</a></li>
+			<li><a class="nav_item nav_item_selected" href="data.html">Data</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		<h1>Files</h1>
+		<?php
+			date_default_timezone_set('America/Los_Angeles');
+			
+			function getContent($i) {
+				$array = file("data/data" . $i . ".txt");
+				array_shift($array);
+				$content = implode($array);
+				return $content;
+			}
+		
+			// Set up final strings
+			$display0 = ""; $display1 = "";
+			$time0 = 0; $time1 = 0;
+			$time = 0;
+			
+			if (file_exists("data/data0.txt")) {
+				$file0 = fopen("data/data0.txt", "r");
+				if ($file0 && ($line = fgets($file0))) {
+					$time0 = intval($line);
+				}
+				fclose($file0);
+			}
+			
+			if (file_exists("data/data1.txt")) {
+				$file1 = fopen("data/data1.txt", "r");
+				if ($file1 && ($line = fgets($file1))) {
+					$time1 = intval($line);
+				}
+				fclose($file1);
+			}
+			
+			if ($time0 != 0 && $time1 != 0) {
+				// Both files are valid
+				if ($time0 == $time1) {
+					// Both files are from same session
+					$time = $time0;
+					$display0 = getContent(0);
+					$display1 = getContent(1);
+				} else if ($time0 > $time1) {
+					// File 0 is from latest session
+					$time = $time0;
+					$display0 = getContent(0);
+				} else {
+					// File 1 is from latest session
+					$time = $time1;
+					$display1 = getContent(1);
+				}
+			} else if ($time0 != 0) {
+				// File 0 is valid
+				$time = $time0;
+				$display0 = getContent(0);
+			} else if ($time1 != 0) {
+				// File 1 is valid
+				$time = $time1;
+				$display1 = getContent(1);
+			} else {
+				// No session data exists
+			}
+		?>
+		<h2>
+			<?php $time == 0 ? print 'No session data' : print date('m/d/Y H:i:s \M\T', $time); ?>
+		</h2>
+		<div id="space-for-files">
+			<div class="file">
+				<div class="file_title">
+					<span class="file_name">Device 1</span>
+				</div>
+				<div id="file0_content" class="file_content">
+					<pre id="file0_text"><?php echo $display0; ?></pre>
+				</div>
+			</div>
+			<div class="file">
+				<div class="file_title">
+					<span class="file_name">Device 2</span>
+				</div>
+				<div id="file1_content" class="file_content">
+					<pre id="file1_text"><?php echo $display1; ?></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

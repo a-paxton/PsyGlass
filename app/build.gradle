@@ -1,0 +1,44 @@
+/**
+ *
+ * PsyGlass: An Open-Source Framework for Implementing Google Glass in Research Settings
+ *
+ * For more, see "PsyGlass: Capitalizing on Google Glass for Naturalistic Data Collection"
+ * (Paxton, Rodriguez, & Dale, submitted).
+ *
+ * Written by K. Rodriguez, A. Paxton, & R. Dale.
+ * Created on 13 October 2014.
+ * Last modified on 16 December 2014.
+ *
+ */
+
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+    flatDir {
+        dirs 'prebuilt-libs'
+    }
+}
+
+android {
+    compileSdkVersion "Google Inc.:Glass Development Kit Preview:19"
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.cognactionlab.PsyGlass"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

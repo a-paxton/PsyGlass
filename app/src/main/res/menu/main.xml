@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/start_experiment"
+        android:icon="@drawable/ic_game_50"
+        android:title="@string/main_start"
+        />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_gear_50"
+        android:title="@string/main_settings"
+        />
+
+</menu>

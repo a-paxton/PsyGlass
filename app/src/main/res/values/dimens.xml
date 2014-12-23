@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_padding">40px</dimen>
+    <dimen name="state_space">8dp</dimen>
+    <dimen name="text_size">40px</dimen>
+</resources>
