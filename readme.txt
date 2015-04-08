@@ -13,7 +13,10 @@ Transfer the following files and folders to the target server location before ru
 
 Additional "wrappers" available to transform the experimenter console. Relevant files are available in folders:
 		Lexical Decision Task
-			Modifies the experimenter console to include a "Decissify" button that will update connected Glass devices with words from a list of words and nonwords. Lists may be modified on the associated .js file.
+			Modifies the experimenter console to include a "Decissify" 
+			button that will update connected Glass devices with words 
+			from a list of words and nonwords. Lists may be modified 
+			on the associated .js file.
 		
 For more, see "PsyGlass: Capitalizing on Google Glass for Naturalistic Data Collection" (Paxton, Rodriguez, & Dale, in press, Behavior Research Methods).
 
