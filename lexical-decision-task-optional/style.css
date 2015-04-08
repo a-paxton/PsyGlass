@@ -1,0 +1,11 @@
+#decissify_button {
+	padding:10px;
+	background-color:#004400;
+	color:white;
+	text-align:center;
+	font-weight:bolder;
+	width:200px;
+	cursor:pointer;
+	border-radius:10px;
+	margin-left:440px;
+}

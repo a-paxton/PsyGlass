@@ -10,11 +10,15 @@ Transfer the following files and folders to the target server location before ru
 		index.html	
 		"resources" folder
 		"data" folder (should be given read, write, and execute permissions)
+
+Additional "wrappers" available to transform the experimenter console. Relevant files are available in folders:
+		Lexical Decision Task
+			Modifies the experimenter console to include a "Decissify" button that will update connected Glass devices with words from a list of words and nonwords. Lists may be modified on the associated .js file.
 		
-For more, see "PsyGlass: Capitalizing on Google Glass for Naturalistic Data Collection" (Paxton, Rodriguez, & Dale, submitted).
+For more, see "PsyGlass: Capitalizing on Google Glass for Naturalistic Data Collection" (Paxton, Rodriguez, & Dale, in press, Behavior Research Methods).
 
 For information on purchasing Glass for your research team, email glass-edu(at)google(dot)com.
 
 Written by K. Rodriguez, A. Paxton, & R. Dale
 Created on 13 October 2014
-Last modified on 13 March 2015
+Last modified on 8 April 2015

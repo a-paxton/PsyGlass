@@ -1,5 +1,11 @@
 /* For more information on jQuery: http://learn.jquery.com/about-jquery/how-jquery-works/ */
 
+/* PsyGlass: An Open-Source Framework for Implementing Google Glass in Research Settings */
+/* This script should be used for the original experimenter console. Consult readme file for additional options. */
+/* Written by K. Rodriguez, A. Paxton, & R. Dale */
+/* Created on 13 October 2014 */
+/* Last modified on 8 April 2015 */
+
 /* CALLBACK STUFF GOES HERE */
  
 // Callback for when the document is ready to be manipulated
