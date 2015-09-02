@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Experiment 2</title>
+	<link rel="shortcut icon" href="resources/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/style_js_ldt.css">	
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+	<script src="resources/jquery-2.1.1.min.js"></script>
+	<script src="resources/server_connect.js"></script>
+	<script src="resources/script.js"></script>
+</head>
+
+<body>
+	<nav>
+		<ul class="clearfix">
+			<li><a id="nav_home" href="index.html">E2</a></li>
+			<li><a class="nav_item" href="index.html">Home</a></li>
+			<li><a class="nav_item nav_item_selected" href="experiment.html">Experiment</a></li>
+			<li><a class="nav_item" href="data.html">Data</a></li>
+		</ul>
+	</nav>
+	<div id="content" style="margin-bottom: 4em;">
+		<h1>Devices</h1>
+		<div id="space-for-devices">
+			<div class="card">
+				<div class="card_title">
+					<span class="card_name">Device 1</span>
+				</div>
+				<div id="device0_display" class="card_display">
+					<textarea id="device0_text" placeholder="Click here to enter text" disabled="true"></textarea>
+				</div>
+				<div class="card_action">
+					#<input id="device0_color" type="text" value="000000" disabled="true"></input>
+					<button id="device0_button" disabled="true">Send Update</button>
+				</div>
+				<span id="device0_status" class="card_status">Disconnected</span>
+				<span id="device0_ping" class="card_ping">Ping</span>
+			</div>
+			<div class="card">
+				<div class="card_title">
+					<span class="card_name">Device 2</span>
+				</div>
+				<div id="device1_display" class="card_display">
+					<textarea id="device1_text" placeholder="Click here to enter text" disabled="true"></textarea>
+				</div>
+				<div class="card_action">
+					#<input id="device1_color" type="text" value="000000" disabled="true"></input>
+					<button id="device1_button" disabled="true">Send Update</button>
+				</div>
+				<span id="device1_status" class="card_status">Disconnected</span>
+				<span id="device1_ping" class="card_ping">Ping</span>
+			</div>
+		</div>
+		<div id="purposify_button">Cross Purposify!</div>
+	</div>
+	<div id="footer">
+		<a id="experiment_log">Disconnected from server</a>
+		<button id="experiment_button">Connect to Server</button>
+		<button id="experiment_upload">Upload Device Data</button>
+	</div>
+	<script src="resources/script_js_ldt.js"></script>	
+</body>
+</html>
