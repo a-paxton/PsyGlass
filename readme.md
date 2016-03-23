@@ -24,5 +24,5 @@ For more, see "PsyGlass: Capitalizing on Google Glass for naturalistic data coll
 For information on purchasing Glass for your research team, email `glass-edu(at)google(dot)com`.
 
 **Written by**: K. Rodriguez, A. Paxton, & R. Dale
-**Created**: 13 October 2014
-**Last modified**: 23 March 2016
+<br>**Created**: 13 October 2014
+<br>**Last modified**: 23 March 2016
